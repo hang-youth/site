@@ -4,8 +4,8 @@ export default function Header() {
     return (
         <div className={styles.container}>
             <nav className={styles.nav}>
-                <a href="/">Tour</a>
-                <a href="/">Shop</a>
+                <a href="#tour">Tour</a>
+                <a href="#shop">Shop</a>
                 <a href="/">Releases</a>
                 <a href="/">Financieel verslag</a>
             </nav>

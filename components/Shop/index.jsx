@@ -3,9 +3,10 @@ import styles from './Shop.module.scss'
 
 export default function Shop(props) {
     return (
-        <div className={styles.container}>
+        <div id="shop" className={styles.container}>
             <div className={styles.content}>
                 <h1>Shop</h1>
+
             </div>
             <Placeholder title="Geile fash selfie"/>
         </div>

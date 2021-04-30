@@ -4,7 +4,7 @@ import styles from './Hero.module.scss'
 export default function Hero() {
     return (
         <div className={styles.container}>
-            <Placeholder title="HERO"/>
+            <Placeholder title="Hero"/>
         </div>
     )
 }
