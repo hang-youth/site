@@ -1,0 +1,54 @@
+.container {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+
+    margin: 8px;
+
+    cursor: pointer;
+
+    transition: margin 0.5s ease-in-out;
+
+    &:hover {
+        .title {
+            color: #ffffff;
+        }
+        .date_wrapper {
+            background-color: #ffffff;
+            color: #000000;
+        }
+    }
+}
+
+.date_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    height: 64px;
+    width: 64px;
+    background-color: #000000;
+    padding: 8px;
+
+    font-family: 'Hangende Jeugd VET';
+    color: #ffffff;
+
+    small {
+        font-size: 16px;
+    }
+
+    span {
+        font-size: 48px;
+    }
+}
+
+.title {
+    flex: 1;
+    padding: 8px 24px;
+
+    font-size: 40px;
+    font-family: 'Hangende Jeugd VET';
+    text-transform: uppercase;
+}
