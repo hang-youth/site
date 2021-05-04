@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'Hangende Jeugd MARKER';
+    src: url('/fonts/Hangende_Jeugd_MARKER.eot'); /* IE9 Compat Modes */
+    src: url('/fonts/Hangende_Jeugd_MARKER.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('/fonts/Hangende_Jeugd_MARKER.woff2') format('woff2'), /* Super Modern Browsers */
+         url('/fonts/Hangende_Jeugd_MARKER.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+    font-family: 'Hangende Jeugd VET';
+    src: url('/fonts/Hangende_Jeugd_VET.eot'); /* IE9 Compat Modes */
+    src: url('/fonts/Hangende_Jeugd_VET.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('/fonts/Hangende_Jeugd_VET.woff2') format('woff2'), /* Super Modern Browsers */
+         url('/fonts/Hangende_Jeugd_VET.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Hangende Jeugd VET', sans-serif;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 48px;
+}

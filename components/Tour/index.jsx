@@ -6,8 +6,8 @@ export default function Tour(props) {
         <div id="tour" className={styles.container}>
             <Placeholder title="Kanker geile foto"/>
             <div className={styles.content}>
-                <h1>Tour</h1>
-                <h2>Aankomende data</h2>
+                <h2>Tour</h2>
+                <h3>Aankomende data</h3>
                 
                 <a href="/">Tix &amp; more</a>
             </div>
