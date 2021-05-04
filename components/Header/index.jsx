@@ -6,7 +6,7 @@ export default function Header() {
             <nav className={styles.nav}>
                 <a href="#tour">Tour</a>
                 <a href="#shop">Shop</a>
-                <a href="/">Releases</a>
+                <a href="#releases">Releases</a>
                 <a href="/">Financieel verslag</a>
             </nav>
         </div>
