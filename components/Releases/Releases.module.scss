@@ -1,0 +1,12 @@
+.container {
+    display: flex;
+    flex: 1;
+    height: calc(100vh - 100px);
+}
+
+.content {
+    flex: 1;
+    &:nth-child(1){
+        flex: .6;
+    }
+}
