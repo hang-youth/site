@@ -32,7 +32,7 @@ export default function Post({doc}) {
 }
 
 export async function getStaticProps({params}) {
-    const doc = getContentBySlug(params.slug, [
+    const doc = getContentBySlug('pages', params.slug, [
         'title',
         'slug',
         'author',
@@ -51,7 +51,7 @@ export async function getStaticProps({params}) {
 }
 
 export async function getStaticPaths() {
-    const posts = getAllContent(['slug'])
+    const posts = getAllContent('pages', ['slug'])
 
     return {
         paths: posts.map((post) => {
