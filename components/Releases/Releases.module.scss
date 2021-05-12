@@ -1,13 +1,15 @@
 .container {
     display: flex;
     flex: 1;
-    height: calc(100vh - 100px);
+    min-height: calc(100vh - 100px);
 }
 
 .content {
     flex: 1;
     padding: 24px 32px;
-    &:nth-child(1){
-        flex: .6;
-    }
+}
+
+.album_wrapper {
+    display: flex;
+    flex-wrap: wrap;
 }
