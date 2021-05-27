@@ -5,10 +5,9 @@
 }
 
 .cover {
-    flex-basis: 300px;
+    flex-basis: 500px;
     padding: 32px;
     cursor: pointer;
-
 
     &:hover {
         img {
@@ -25,4 +24,41 @@
 .content {
     flex: 1;
     padding: 32px;
+    flex-basis: 400px;;
+}
+
+.stream {
+    padding: 32px;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 8px;
+    padding: 8px 8px;
+
+    background-color: #000000;
+    color: #ffffff;
+
+    &:hover {
+        opacity: .8;
+    }
+    img {
+        width: 36px;
+        padding: 0px 4px;
+    }
+    span {
+        padding: 4px;
+    }
+    &[data-platform=spotify] {
+        background-color: #66D46E;
+    }
+
+    &[data-platform=bandcamp] {
+        background-color: #629aa9;
+    }
+    &[data-platform=apple-music] {
+        background-color: #fa2d48;
+    }
 }

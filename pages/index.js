@@ -27,7 +27,7 @@ export default function Home({albums}) {
 }
 
 export async function getStaticProps() {
-  const albums = getAllContent('albums', ['slug', 'coverImage', 'title', 'content']).map(async (album) => {
+  const albums = getAllContent('albums', ['slug', 'coverImage', 'title', 'content', 'linkBandcamp', 'linkSpotify', 'linkAppleMusic']).map(async (album) => {
       album.content = await markdownToHtml(album.content || '')
       return album
   })
