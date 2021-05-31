@@ -22,7 +22,7 @@ export default function Releases({albums, singles}) {
                     <div className={styles.album_wrapper}>
                         {
                             singles.map(single => 
-                                <Cover cover={single} setActive={() => setActiveSingle(single.slug)}/>
+                                <Cover key={single.slug}  cover={single} setActive={() => setActiveSingle(single.slug)}/>
                             )
                         }
                     </div>
@@ -37,7 +37,7 @@ export default function Releases({albums, singles}) {
                     <div className={styles.album_wrapper}>
                         {
                             albums.map(album => 
-                                <Cover cover={album} setActive={() => setActiveAlbum(album.slug)}/>
+                                <Cover key={album.slug} cover={album} setActive={() => setActiveAlbum(album.slug)}/>
                             )
                         }
                     </div>
