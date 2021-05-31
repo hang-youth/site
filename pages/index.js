@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Contact from '../components/Contact'
 import Header from '../components/Header'
 import Hero from '../components/Hero'
 import Releases from '../components/Releases'
@@ -17,6 +18,7 @@ export default function Home({albums, singles}) {
         <meta name="description" content="Een uit de hand gelopen fanpage" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Contact/>
       <Releases albums={albums} singles={singles}/>
       <Shop/>
       <Tour/>
