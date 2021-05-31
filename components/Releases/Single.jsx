@@ -11,7 +11,7 @@ export default function Single({single, setActive}) {
                 <h1>{single.title}</h1>
                 <div dangerouslySetInnerHTML={{__html: single.content}}/>
             </div>
-            {(album.linkSpotify || album.linkBandcamp || album.linkAppleMusic) &&
+            {(single.linkSpotify || single.linkBandcamp || single.linkAppleMusic) &&
                 <div className={styles.stream}>
                     <h2>Stream</h2>
                     <BandcampButton single={single}/>
