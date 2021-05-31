@@ -1,5 +1,6 @@
 .container {
     display: flex;
+    flex-direction: column;
     flex: 1;
     min-height: calc(100vh - 100px);
 }
@@ -7,6 +8,7 @@
 .content {
     flex: 1;
     padding: 24px 32px;
+    min-height: 80vh;
 }
 
 .album_wrapper {

@@ -11,12 +11,14 @@ export default function Album({album, setActive}) {
                 <h1>{album.title}</h1>
                 <div dangerouslySetInnerHTML={{__html: album.content}}/>
             </div>
-            <div className={styles.stream}>
-                <h2>Stream</h2>
-                <BandcampButton album={album}/>
-                <SpotifyButton album={album}/>
-                <AppleMusicButton album={album}/>
-            </div>
+            {(album.linkSpotify || album.linkBandcamp || album.linkAppleMusic) &&
+                <div className={styles.stream}>
+                    <h2>Stream</h2>
+                    <BandcampButton album={album}/>
+                    <SpotifyButton album={album}/>
+                    <AppleMusicButton album={album}/>
+                </div>
+            }
         </div>
     )
 }

@@ -1,9 +1,10 @@
 import styles from './Cover.module.scss'
 
-export default function Cover({album, setActive}) {
+export default function Cover({cover, setActive}) {
+    
     return (
-        <div key={album.slug} className={styles.container} onClick={setActive}>
-            <img src={album.coverImage} alt={album.title}/>
+        <div key={cover.slug} className={styles.container} onClick={setActive}>
+            <img src={cover.coverImage} alt={cover.title}/>
         </div>
     )
 }
