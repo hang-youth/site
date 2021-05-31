@@ -9,7 +9,7 @@ import { getAllContent } from '../lib/contentProvider'
 import markdownToHtml from '../lib/markdownToHtml'
 import styles from '../styles/Home.module.css'
 
-export default function Home({albums}) {
+export default function Home({albums, singles}) {
   return (
     <div className={styles.container}>
       <Head>
@@ -17,7 +17,7 @@ export default function Home({albums}) {
         <meta name="description" content="Een uit de hand gelopen fanpage" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Releases albums={albums}/>
+      <Releases albums={albums} singles={singles}/>
       <Shop/>
       <Tour/>
       <Header/>
@@ -27,14 +27,20 @@ export default function Home({albums}) {
 }
 
 export async function getStaticProps() {
-  const albums = getAllContent('albums', ['slug', 'coverImage', 'title', 'content']).map(async (album) => {
-      album.content = await markdownToHtml(album.content || '')
-      return album
+  const albums = getAllContent('albums', ['slug', 'coverImage', 'title', 'content', 'linkBandcamp', 'linkSpotify', 'linkAppleMusic']).map(async (album) => {
+    album.content = await markdownToHtml(album.content || '')
+    return album
+  })
+
+  const singles = getAllContent('singles', ['slug', 'coverImage', 'title', 'content', 'linkBandcamp', 'linkSpotify', 'linkAppleMusic']).map(async (single) => {
+    single.content = await markdownToHtml(single.content || '')
+    return single
   })
 
   return {
       props: {
-          albums: await Promise.all(albums)
+          albums: await Promise.all(albums),
+          singles: await Promise.all(singles)
       },
   }
 }
