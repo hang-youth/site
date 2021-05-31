@@ -2,7 +2,7 @@ import styles from './Contact.module.scss'
 
 export default function Contact() {
     return (
-        <div id="#contact" className={styles.container}>
+        <div id="contact" className={styles.container}>
             <div className={styles.content}>
                 <h2>Contact</h2>
                 <p><b>Boekingen:</b> Jeps Salfischberger (<a href="mailto:j.salfischberger@mojo.nl">j.salfischberger@mojo.nl</a>)</p>
