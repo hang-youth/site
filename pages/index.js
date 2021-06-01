@@ -1,3 +1,5 @@
+import commerce from '@lib/api/commerce'
+
 import Head from 'next/head'
 import Image from 'next/image'
 import { useEffect } from 'react'
@@ -12,7 +14,7 @@ import { getAllContent } from '../lib/contentProvider'
 import markdownToHtml from '../lib/markdownToHtml'
 import styles from '../styles/Home.module.css'
 
-export default function Home({albums, singles}) {
+export default function Home({albums, products, singles}) {
 
   useEffect(() => {
     window.addEventListener('load', function(e){
@@ -33,7 +35,7 @@ export default function Home({albums, singles}) {
       <Footer/>
       <Contact/>
       <Releases albums={albums} singles={singles}/>
-      <Shop/>
+      <Shop products={products}/>
       <Tour/>
       <Header/>
       <Hero/>
@@ -41,10 +43,22 @@ export default function Home({albums, singles}) {
   )
 }
 
-export async function getStaticProps() {
+export async function getStaticProps({
+    preview,
+    locale,
+    locales,
+  }) {
+  const config = { locale, locales }
+
   const albums = getAllContent('albums', ['slug', 'coverImage', 'title', 'content', 'linkBandcamp', 'linkSpotify', 'linkAppleMusic']).map(async (album) => {
     album.content = await markdownToHtml(album.content || '')
     return album
+  })
+
+  const { products } = await commerce.getAllProducts({
+    variables: { first: 12 },
+    config,
+    preview,
   })
 
   const singles = getAllContent('singles', ['slug', 'coverImage', 'title', 'content', 'linkBandcamp', 'linkSpotify', 'linkAppleMusic']).map(async (single) => {
@@ -55,6 +69,7 @@ export async function getStaticProps() {
   return {
       props: {
           albums: await Promise.all(albums),
+          products,
           singles: await Promise.all(singles)
       },
   }
