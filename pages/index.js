@@ -32,8 +32,6 @@ export default function Home({albums, singles, tour}) {
       </Head>
       <Footer/>
       <Contact/>
-      <Releases albums={albums} singles={singles}/>
-      <Shop/>
       <Tour tour={tour}/>
       <Header/>
       <Hero/>
