@@ -12,8 +12,8 @@ import { getAllContent } from '../lib/contentProvider'
 import markdownToHtml from '../lib/markdownToHtml'
 import styles from '../styles/Home.module.css'
 
-export default function Home({albums, singles}) {
-
+export default function Home({albums, singles, tour}) {
+  
   useEffect(() => {
     window.addEventListener('load', function(e){
       window.scrollTo(0, document.body.scrollHeight)
@@ -34,7 +34,7 @@ export default function Home({albums, singles}) {
       <Contact/>
       <Releases albums={albums} singles={singles}/>
       <Shop/>
-      <Tour/>
+      <Tour tour={tour}/>
       <Header/>
       <Hero/>
     </div>
@@ -52,10 +52,13 @@ export async function getStaticProps() {
     return single
   })
 
+  const tour = getAllContent('tour', ['slug', 'date', 'place', 'name', 'linkTickets'])
+
   return {
       props: {
           albums: await Promise.all(albums),
-          singles: await Promise.all(singles)
+          singles: await Promise.all(singles),
+          tour: await Promise.all(tour)
       },
   }
 }

@@ -1,9 +1,10 @@
 .container {
     display: flex;
     flex: 1;
-    height: calc(100vh - 100px);
+    min-height: calc(100vh - 100px);
     position: relative;
     overflow: hidden;
+    padding: 64px 16px;
 }
 
 .background {
@@ -34,9 +35,19 @@
     align-items: center;
 
     h2 {
-        color: #ffffff;
+        color: #000000;
         font-size: 120px;
         margin-top: 0px;
         margin-bottom: 32px;
+    }
+}
+
+@media(min-width: 768px){
+    .show_wrapper {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+        column-gap: 40px;
+        column-rule: 10px double #000000;
     }
 }
