@@ -9,10 +9,20 @@
 
     z-index: 10;
 
-    border-bottom: 3px solid #000000;
-    border-top: 3px solid #000000;
-
     font-family: 'Hangende Jeugd MARKER';
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: -50px;
+        bottom: -30px;
+        left: 0px;
+        right: 0px;
+
+        background-image: url('/images/menubar.png');
+        background-size: auto 100%;
+        z-index: -1;
+    }
 }
 
 .nav {
@@ -24,6 +34,11 @@
     a {
         text-transform: uppercase;
         font-weight: 700;
-        font-size: 32px;
+        font-size: 40px;
+        transition: color 0.1s ease-in;
+
+        &:hover {
+            color: #d13535;
+        }
     }
 }

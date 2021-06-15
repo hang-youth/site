@@ -3,8 +3,6 @@ import styles from './Hero.module.scss'
 
 export default function Hero() {
     return (
-        <div className={styles.container}>
-            <Placeholder title="Hero"/>
-        </div>
+        <div id="hero" className={styles.container}></div>
     )
 }
