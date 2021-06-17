@@ -6,8 +6,6 @@
 
     margin: 8px;
 
-    // cursor: pointer;
-
     transition: margin 0.5s ease-in-out;
 
     // -moz-column-break-inside:avoid;
@@ -16,16 +14,22 @@
     -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
           page-break-inside: avoid; /* Firefox */
                break-inside: avoid; /* IE 10+ */
+}
 
-    // &:hover {
-    //     .title {
-    //         color: #ffffff;
-    //     }
-    //     .date_wrapper {
-    //         background-color: #ffffff;
-    //         color: #000000;
-    //     }
-    // }
+.hasLink {
+    cursor: pointer;
+    &:hover {
+        .title {
+            color: #ffffff;
+        }
+        .date_wrapper {
+            background-color: #ffffff;
+            color: #000000;
+        }
+        .button_wrapper a {
+            opacity: .7;
+        }
+    }
 }
 
 .date_wrapper {
@@ -53,6 +57,7 @@
 }
 
 .location_wrapper {
+    flex: 1;
     padding: 8px 16px;
 }
 .place, .name {
@@ -66,4 +71,14 @@
 }
 .name {
     font-size: 20px;
+}
+
+.button_wrapper {
+    a {
+        background-color: #d13535;
+        padding: 8px;
+        color: #ffffff;
+        font-family: 'Hangende Jeugd VET';
+        text-transform: uppercase;
+    }
 }

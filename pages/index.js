@@ -50,7 +50,7 @@ export async function getStaticProps() {
     return single
   })
 
-  const tour = getAllContent('tour', ['slug', 'date', 'place', 'name', 'linkTickets'])
+  const tour = getAllContent('tour', ['slug', 'date', 'place', 'name', 'linkTickets', 'soldout'])
 
   return {
       props: {
