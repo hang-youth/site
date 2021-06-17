@@ -6,8 +6,6 @@
 
     margin: 8px;
 
-    transition: margin 0.5s ease-in-out;
-
     // -moz-column-break-inside:avoid;
     // -webkit-column-break-inside:avoid;
     // column-break-inside: avoid;
@@ -38,11 +36,11 @@
     align-items: center;
     justify-content: space-between;
 
+    flex-basis: 64px;
     height: 64px;
     width: 64px;
     background-color: #000000;
     padding: 8px 8px 16px 8px;
-    line-height: 1em;
 
     font-family: 'Hangende Jeugd VET';
     color: #ffffff;
@@ -80,5 +78,30 @@
         color: #ffffff;
         font-family: 'Hangende Jeugd VET';
         text-transform: uppercase;
+    }
+}
+
+@media(max-width: 414px){
+    .container {
+        margin: 4px 8px;
+        width: 100%;
+    }
+    .date_wrapper {
+        height: 48px;
+        width: 48px;
+        flex-basis: 48px;
+        padding: 6px 6px 16px 6px;
+        small {
+            font-size: 14px;
+        }
+        span {
+            font-size: 36px;
+        }
+    }
+    .place {
+        font-size: 24px;
+    }
+    .name {
+        font-size: 18px;
     }
 }
