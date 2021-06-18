@@ -27,7 +27,7 @@ export default function Home({albums, singles, tour}) {
     <div className={styles.container}>
       <Head>
         <title>Hang Youth</title>
-        <meta name="description" content="Een uit de hand gelopen fanpage" />
+        <meta name="description" content="Koop tickets voor de Hang Youth tour." />
         <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png"/>
         <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png"/>
         <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png"/>
@@ -62,7 +62,7 @@ export async function getStaticProps() {
     return single
   })
 
-  const tour = getAllContent('tour', ['slug', 'date', 'place', 'name', 'linkTickets', 'soldout'])
+  const tour = getAllContent('tour', ['slug', 'date', 'venue', 'name', 'linkTickets', 'soldout'])
 
   return {
       props: {
