@@ -58,13 +58,13 @@
     flex: 1;
     padding: 8px 16px;
 }
-.place, .name {
+.venue, .name {
     flex: 1;
     font-family: 'Hangende Jeugd VET';
     text-transform: uppercase;
 }
 
-.place {
+.venue {
     font-size: 30px;
 }
 .name {
@@ -98,7 +98,7 @@
             font-size: 36px;
         }
     }
-    .place {
+    .venue {
         font-size: 24px;
     }
     .name {

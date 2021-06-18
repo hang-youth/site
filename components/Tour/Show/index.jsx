@@ -16,7 +16,7 @@ export default function Show({show}) {
         <li id="show" className={`${styles.container} ${show.linkTickets?styles.hasLink:''}`} onClick={onClick}>
             <div className={styles.date_wrapper}><small>{month}</small><span>{date.getDate()}</span></div>
             <div className={styles.location_wrapper}>
-                <div className={styles.place}>{show.place}</div>
+                <div className={styles.venue}>{show.venue}</div>
                 <div className={styles.name}>{show.name}</div>
             </div>
             {
