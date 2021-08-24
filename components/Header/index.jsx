@@ -25,7 +25,7 @@ export default function Header({ scroll = false }) {
               </>
               }
             </nav>
-            <div class={styles.mobileToggle} onClick={() => setOpen(true)}>
+            <div className={styles.mobileToggle} onClick={() => setOpen(true)}>
               MENU
             </div>
         </div>
