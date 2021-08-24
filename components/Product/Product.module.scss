@@ -1,0 +1,85 @@
+.container {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  min-height: calc(100vh - 100px);
+}
+
+.description {
+  flex: 1;
+  padding: 24px 32px;
+  flex-basis: 500px;
+
+  p {
+    font-size: 25px;
+    line-height: 2em;
+  }
+  h3 {
+    font-size: 32px;
+  }
+}
+
+.gallery {
+  flex: 1;
+  flex-basis: 500px;
+  padding: 24px 32px;
+}
+
+.options {
+  display: flex;
+
+  button {
+    flex-basis: 80px;
+    cursor: pointer;
+
+    // text-align: center;
+    font-size: 32px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Hangende Jeugd VET';
+
+    border: 3px solid #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 8px;
+    padding: 8px 8px;
+
+    background-color: #000000;
+    color: #ffffff;
+
+    &:hover {
+        opacity: .8;
+    }
+    &[data-active="true"] {
+      border-color: #000000;
+      background-color: #ffffff;
+      color: #000000;
+    }
+  }
+}
+
+.button {
+  flex-basis: 80px;
+  cursor: pointer;
+
+  // text-align: center;
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: 'Hangende Jeugd VET';
+
+  border: 3px solid #ffffff;
+
+  margin-bottom: 8px;
+  padding: 12px 16px;
+
+  background-color: #d13535;
+  color: #ffffff;
+
+  &:hover {
+      opacity: .8;
+  }
+}

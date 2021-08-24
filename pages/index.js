@@ -1,3 +1,5 @@
+import commerce from '@lib/api/commerce'
+
 import Head from 'next/head'
 import Image from 'next/image'
 import { useEffect } from 'react'
@@ -12,7 +14,7 @@ import { getAllContent } from '../lib/contentProvider'
 import markdownToHtml from '../lib/markdownToHtml'
 import styles from '../styles/Home.module.css'
 
-export default function Home({albums, singles}) {
+export default function Home({albums, products, singles, tour}) {
 
   useEffect(() => {
     window.addEventListener('load', function(e){
@@ -27,24 +29,46 @@ export default function Home({albums, singles}) {
     <div className={styles.container}>
       <Head>
         <title>Hang Youth</title>
-        <meta name="description" content="Een uit de hand gelopen fanpage" />
-        <link rel="icon" href="/favicon.ico" />
+        <meta name="description" content="Koop tickets voor de Hang Youth tour." />
+        <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png"/>
+        <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png"/>
+        <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png"/>
+        <link rel="manifest" href="/icons/site.webmanifest"/>
+        <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#5bbad5"/>
+        <link rel="shortcut icon" href="/icons/favicon.ico"/>
+        <meta name="apple-mobile-web-app-title" content="Hang Youth"/>
+        <meta name="application-name" content="Hang Youth"/>
+        <meta name="msapplication-TileColor" content="#2b5797"/>
+        <meta name="msapplication-config" content="/icons/browserconfig.xml"/>
+        <meta name="theme-color" content="#ffffff"/>
       </Head>
       <Footer/>
       <Contact/>
       <Releases albums={albums} singles={singles}/>
-      <Shop/>
-      <Tour/>
-      <Header/>
+      <Shop products={products}/>
+      <Tour tour={tour}/>
+      <Header scroll/>
       <Hero/>
     </div>
   )
 }
 
-export async function getStaticProps() {
+export async function getStaticProps({
+    preview,
+    locale,
+    locales,
+  }) {
+  const config = { locale, locales }
+
   const albums = getAllContent('albums', ['slug', 'coverImage', 'title', 'content', 'linkBandcamp', 'linkSpotify', 'linkAppleMusic']).map(async (album) => {
     album.content = await markdownToHtml(album.content || '')
     return album
+  })
+
+  const { products } = await commerce.getAllProducts({
+    variables: { first: 12 },
+    config,
+    preview,
   })
 
   const singles = getAllContent('singles', ['slug', 'coverImage', 'title', 'content', 'linkBandcamp', 'linkSpotify', 'linkAppleMusic']).map(async (single) => {
@@ -52,10 +76,14 @@ export async function getStaticProps() {
     return single
   })
 
+  const tour = getAllContent('tour', ['slug', 'date', 'venue', 'name', 'linkTickets', 'soldout'])
+
   return {
       props: {
           albums: await Promise.all(albums),
-          singles: await Promise.all(singles)
+          products,
+          singles: await Promise.all(singles),
+          tour: await Promise.all(tour)
       },
   }
 }

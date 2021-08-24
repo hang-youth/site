@@ -42,3 +42,50 @@
         }
     }
 }
+
+.mobileToggle {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex: 1;
+
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 32px;
+  transition: color 0.1s ease-in;
+
+  &:hover {
+      color: #d13535;
+  }
+}
+
+@media(min-width: 769px){
+  .mobileToggle {
+    display: none;
+  }
+}
+
+@media(max-width: 768px){
+  .container {
+    height: 50px;
+
+    &:before {
+      top: -20px;
+      bottom: -20px;
+  }
+  }
+  .nav {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    background-color: #ffffff;
+    top: 0px;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+
+    &.active {
+      display: flex;
+    }
+  }
+}
