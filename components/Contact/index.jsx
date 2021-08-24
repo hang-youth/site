@@ -6,7 +6,7 @@ export default function Contact() {
             <div className={styles.content}>
                 <h2>Contact</h2>
                 <p><b>Boekingen:</b> Jeps Salfischberger (<a href="mailto:j.salfischberger@mojo.nl">j.salfischberger@mojo.nl</a>)</p>
-                <p><b>Pers, management, etc:</b> Burning Fik (<a href="mailto:info@burningfik.com">info@burningfik.com</a>)</p>
+                <p><b>Pers, management, etc:</b> Rick Bakker (<a href="mailto:rick@resort.net">rick@resort.net</a>)</p>
                 <p><b>Fanmail &amp; opbouwende kritiek:</b> <a href="mailto:info@hangyouth.nl">info@hangyouth.nl</a></p>
             </div>
         </div>
