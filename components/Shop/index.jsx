@@ -17,7 +17,7 @@ export default function Shop({ products }) {
                   }
                 </div>
             </div>
-            <Placeholder className={styles.placeholder} title="Geile fash selfie"/>
+            {/* <Placeholder className={styles.placeholder} title="Geile fash selfie"/> */}
         </div>
     )
 }
