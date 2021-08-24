@@ -15,7 +15,7 @@ export default function ProductCard({product, onClick}) {
               alt={product.name || 'Product Image'}
               height={320}
               width={320}
-              layout="fixed"
+              layout="responsive"
               // {...imgProps}
             />
         </div>

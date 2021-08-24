@@ -1,4 +1,6 @@
+import { CartSidebarView } from '@components/cart'
 import Product from '@components/Product'
+import { useUI } from '@components/ui/context'
 import commerce from '@lib/api/commerce'
 
 import Head from 'next/head'
@@ -6,11 +8,18 @@ import Image from 'next/image'
 import { useEffect } from 'react'
 import Footer from '../../components/Footer'
 import Header from '../../components/Header'
+import Sidebar from '../../components/Sidebar'
 import markdownToHtml from '../../lib/markdownToHtml'
 import styles from '../../styles/Home.module.css'
 
 export default function Slug({product}) {
+  const {
+    displaySidebar,
+    closeSidebar,
+  } = useUI()
+
   return (
+    <>
     <div className={styles.container}>
       <Head>
         <title>Hang Youth</title>
@@ -21,6 +30,10 @@ export default function Slug({product}) {
       <Product product={product}/>
       <Header/>
     </div>
+    {/* <Sidebar open={displaySidebar} onClose={closeSidebar}>
+        <CartSidebarView />
+    </Sidebar> */}
+    </>
   )
 }
 

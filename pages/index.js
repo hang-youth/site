@@ -47,7 +47,7 @@ export default function Home({albums, products, singles, tour}) {
       <Releases albums={albums} singles={singles}/>
       <Shop products={products}/>
       <Tour tour={tour}/>
-      <Header/>
+      <Header scroll/>
       <Hero/>
     </div>
   )

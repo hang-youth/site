@@ -5,11 +5,6 @@ import ProductCard from './ProductCard'
 import styles from './Shop.module.scss'
 
 export default function Shop({ products }) {
-    const [activeProduct, setActiveProduct] = useState(null)
-    products = [...products, ...products]
-
-    console.log(activeProduct)
-
     return (
         <div id="shop" className={styles.container}>
             <div className={styles.content}>
@@ -17,17 +12,12 @@ export default function Shop({ products }) {
                 <div className={styles.product_wrapper}>
                   {
                     products.slice(0, 3).map((product) => (
-                      <ProductCard onClick={() => setActiveProduct(product)} key={product.id} product={product}/>
+                      <ProductCard key={product.id} product={product}/>
                     ))
                   }
                 </div>
             </div>
-            {
-              activeProduct?
-              <Product product={activeProduct}/>
-              :
-              <Placeholder title="Geile fash selfie"/>
-            }
+            <Placeholder className={styles.placeholder} title="Geile fash selfie"/>
         </div>
     )
 }

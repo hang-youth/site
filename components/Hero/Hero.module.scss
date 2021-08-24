@@ -11,3 +11,9 @@
     background-position: center center;
     background-size: cover;
 }
+
+@media(max-width: 768px){
+  .container {
+    margin-top: -50px;
+  }
+}

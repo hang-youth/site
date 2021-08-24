@@ -3,14 +3,19 @@ import ImageGallery from 'react-image-gallery';
 import styles from './Product.module.scss'
 import { useAddItem, useCart } from '@framework/cart'
 import { getVariant } from './helpers';
+import { useUI } from '@components/ui/context';
+import { useRouter } from 'next/router';
 
 const placeholderImg = '/images/product-img-placeholder.svg'
 
 export default function Product({product}) {
+    const router = useRouter();
     const { data, isLoading, isEmpty } = useCart()
     const addItem = useAddItem()
     const [choices, setChoices] = useState({})
     const variant = getVariant(product, choices)
+
+    const { openSidebar } = useUI()
 
     console.log(data)
 
@@ -23,7 +28,7 @@ export default function Product({product}) {
 
     useEffect(() => {
       // Selects the default option
-      product.variants[0].options?.forEach((v) => {
+      product.variants[0]?.options?.forEach((v) => {
         setChoices((choices) => ({
           ...choices,
           [v.displayName.toLowerCase()]: v.values[0].label.toLowerCase(),
@@ -34,14 +39,16 @@ export default function Product({product}) {
     const addToCart = async () => {
       // setLoading(true)
       try {
-        await addItem({
+        const item = await addItem({
           productId: String(product.id),
           variantId: String(variant ? variant.id : product.variants[0].id),
         })
+
         // openSidebar()
-        // setLoading(false)
+        // window.open(item.url)
+        router.push('/cart')
+
       } catch (err) {
-        // setLoading(false)
       }
     }
 
@@ -60,34 +67,17 @@ export default function Product({product}) {
                     ]
 
                     return (
-                      <button data-active={(v.label.toLowerCase() === active)} onClick={() => setChoices((choices) => {
+                      <button key={i} data-active={(v.label.toLowerCase() === active)} onClick={() => setChoices((choices) => {
                         return {
                           ...choices,
                           [opt.displayName.toLowerCase()]: v.label.toLowerCase(),
                         }})}>{v.label.toLowerCase()}</button>
                     )
-                    // return (
-                    //   <Swatch
-                    //     key={`${opt.id}-${i}`}
-                    //     active={v.label.toLowerCase() === active}
-                    //     variant={opt.displayName}
-                    //     color={v.hexColors ? v.hexColors[0] : ''}
-                    //     label={v.label}
-                    //     onClick={() => {
-                    //       setChoices((choices) => {
-                    //         return {
-                    //           ...choices,
-                    //           [opt.displayName.toLowerCase()]: v.label.toLowerCase(),
-                    //         }
-                    //       })
-                    //     }}
-                    //   />
-                    // )
                   })}
                 </div>
               </div>
             ))}
-            <button onClick={addToCart}>Add to Cart</button>
+            <button className={styles.button} onClick={addToCart}>Add to Cart</button>
           </div>
           <div className={styles.gallery}>
             <ImageGallery items={images}/>
