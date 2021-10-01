@@ -40,17 +40,21 @@
     height: 64px;
     width: 64px;
     background-color: #000000;
-    padding: 8px 8px 16px 8px;
+    padding: 8px 8px 8px 8px;
 
-    font-family: 'Hangende Jeugd VET';
+    // font-family: 'Hangende Jeugd VET';
+    font-weight: bold;
     color: #ffffff;
 
     small {
-        font-size: 18px;
+        font-size: 16px;
+        line-height: .8em;
     }
 
     span {
-        font-size: 48px;
+        font-size: 40px;
+        line-height: 1em;
+        // line-height: .1em;
     }
 }
 
@@ -60,7 +64,8 @@
 }
 .venue, .name {
     flex: 1;
-    font-family: 'Hangende Jeugd VET';
+    // font-family: 'Hangende Jeugd VET';
+    font-weight: bold;
     text-transform: uppercase;
 }
 
@@ -76,7 +81,8 @@
         background-color: #d13535;
         padding: 8px;
         color: #ffffff;
-        font-family: 'Hangende Jeugd VET';
+        // font-family: 'Hangende Jeugd VET';
+        font-weight: bold;
         text-transform: uppercase;
     }
 }
