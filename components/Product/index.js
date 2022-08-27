@@ -48,6 +48,8 @@ export default function Product({product}) {
         // window.open(item.url)
         router.push('/cart')
 
+        // TOOD: toastr cart
+
       } catch (err) {
       }
     }
