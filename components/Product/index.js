@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import ImageGallery from 'react-image-gallery';
 import styles from './Product.module.scss'
 import { useAddItem, useCart } from '@framework/cart'
 import { getVariant } from './helpers';
@@ -80,7 +79,7 @@ export default function Product({product}) {
             <button className={styles.button} onClick={addToCart}>Add to Cart</button>
           </div>
           <div className={styles.gallery}>
-            <ImageGallery items={images}/>
+            {/* <ImageGallery items={images}/> */}
           </div>
         </div>
     )
