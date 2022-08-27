@@ -10,6 +10,7 @@ const isVendure = provider === '@vercel/commerce-vendure'
 
 module.exports = withCommerceConfig({
   commerce,
+  distDir: 'site/.next',
   i18n: {
     locales: ['nl'],
     defaultLocale: 'nl',
