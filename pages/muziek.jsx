@@ -12,11 +12,7 @@ export default function Music({albums, singles}) {
   );
 }
 
-export async function getStaticProps({
-  preview,
-  locale,
-  locales,
-}) {
+export async function getStaticProps() {
 
   const albums = getAllContent('albums', ['slug', 'coverImage', 'title', 'content', 'linkBandcamp', 'linkSpotify', 'linkAppleMusic']).map(async (album) => {
     album.content = await markdownToHtml(album.content || '')

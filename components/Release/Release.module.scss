@@ -2,6 +2,7 @@
     flex: 1;
     display: flex;
     flex-wrap: wrap;
+    text-transform: uppercase;
 }
 
 .cover {
@@ -17,7 +18,6 @@
     flex: 1;
     padding: 32px;
     flex-basis: 420px;
-    text-transform: uppercase;
     font-weight: bold;
 }
 

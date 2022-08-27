@@ -6,7 +6,7 @@ export default function Releases({albums, singles}) {
         <div id="releases" className={styles.container}>
             <h1>Muziek</h1>
             <div className={styles.content}>
-                <h3>Albums</h3>
+                <h2>Albums</h2>
                 {
                     <div className={styles.album_wrapper}>
                         {
@@ -18,7 +18,7 @@ export default function Releases({albums, singles}) {
                 }
             </div>
             <div className={styles.content}>
-                <h3>Singles</h3>
+                <h2>Singles</h2>
                 {
                     <div className={styles.album_wrapper}>
                         {
