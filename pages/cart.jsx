@@ -48,7 +48,6 @@ export default function Cart() {
         <meta name="description" content="Een uit de hand gelopen fanpage" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Footer/>
 
       <div className={styles.wrapper}>
 
@@ -95,7 +94,6 @@ export default function Cart() {
           </div>
         </div>
       </div>
-    <Header/>
     </div>
   )
 }

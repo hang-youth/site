@@ -1,0 +1,28 @@
+.grid {
+  list-style: none;
+  padding: 0;
+  margin-left: 0;
+  align-items: flex-start;
+
+  @media (min-width: 600px) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-gap: 16px;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  .item {
+    max-width: 320px;
+    a:hover {
+      img {
+        opacity: .8;
+      }
+    }
+    p, h3 {
+      margin: 0px;
+    }
+  }
+}

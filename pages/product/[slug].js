@@ -26,9 +26,7 @@ export default function Slug({product}) {
         <meta name="description" content="Een uit de hand gelopen fanpage" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Footer/>
       <Product product={product}/>
-      <Header/>
     </div>
     {/* <Sidebar open={displaySidebar} onClose={closeSidebar}>
         <CartSidebarView />
