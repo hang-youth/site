@@ -7,11 +7,11 @@
 
 .content {
     flex: 1;
-    padding: 24px 32px;
     min-height: 80vh;
 }
 
 .album_wrapper {
     display: flex;
     flex-wrap: wrap;
+    gap: 32px;
 }
