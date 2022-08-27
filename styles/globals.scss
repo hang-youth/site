@@ -4,8 +4,8 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Trade Gothic LT', Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  // font-family: 'Trade Gothic LT', Arial, Helvetica, sans-serif;
+  font-family: Arial;
 }
 
 a {
@@ -15,4 +15,17 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.links a, a.link {
+  display: block;
+  text-transform: uppercase;
+  color: #EA3524;
+  font-weight: bold;
+  text-decoration: underline;
+  margin: 8px 0px;
+
+  &:hover {
+    color: #000000;
+  }
 }

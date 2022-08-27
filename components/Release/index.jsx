@@ -10,38 +10,19 @@ export default function Release({release}) {
       </div>
       <div className={styles.content}>
           <h1>{release.title}</h1>
+          <Links release={release}/>
           <div dangerouslySetInnerHTML={{__html: release.content}}/>
       </div>
-      {(release.linkSpotify || release.linkBandcamp || release.linkAppleMusic) &&
-          <div className={styles.stream}>
-              <h2>Stream</h2>
-              <BandcampButton release={release}/>
-              <SpotifyButton release={release}/>
-              <AppleMusicButton release={release}/>
-          </div>
-      }
     </div>
   )
 }
 
-const SpotifyButton = (props) => {
-  if(props.release.linkSpotify){
-      return <a href={props.release.linkSpotify} target="_blank" rel="noreferrar" className={styles.button} data-platform="spotify"><img src="/images/icon-spotify.png" alt="Spotify"/> <span>PLAY ON SPOTIFY</span></a>
-  }
-  return ''
-}
-
-const BandcampButton = (props) => {
-  console.log(styles)
-  if(props.release.linkBandcamp){
-    return <a href={props.release.linkBandcamp} target="_blank" rel="noreferrar" className={styles.button} data-platform="bandcamp"><img src="/images/icon-bandcamp.png" alt="Bandcamp"/> <span>PLAY ON BANDCAMP</span></a>
-  }
-  return ''
-}
-
-const AppleMusicButton = (props) => {
-  if(props.release.linkAppleMusic){
-      return <a href={props.release.linkAppleMusic} target="_blank" rel="noreferrar" className={styles.button} data-platform="apple-music"><img src="/images/icon-apple-music.png" alt="AppleMusic"/> <span>PLAY ON APPLE MUSIC</span></a>
-  }
-  return ''
+const Links = ({release}) => {
+  return (
+    <div className='links'>
+      {release.linkSpotify && <a href={release.linkSpotify} target="_blank" rel="noreferrar">Luister op spotify</a>}
+      {release.linkBandcamp && <a href={release.linkBandcamp} target="_blank" rel="noreferrar">Luister op bandcamp</a>}
+      {release.linkAppleMusic && <a href={release.linkAppleMusic} target="_blank" rel="noreferrar">Luister op apple music</a>}
+    </div>
+  )
 }

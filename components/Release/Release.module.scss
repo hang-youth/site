@@ -5,20 +5,20 @@
 }
 
 .cover {
-    flex-basis: 500px;
+    flex-basis: 420px;
     padding: 32px;
     cursor: pointer;
 
     img {
         width: 100%;
-        box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.4);
-        transition: box-shadow 0.1s ease-in;
     }
 }
 .content {
     flex: 1;
     padding: 32px;
     flex-basis: 420px;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 .stream {
@@ -46,16 +46,6 @@
     }
     span {
         padding: 4px;
-    }
-    &[data-platform=spotify] {
-        background-color: #66D46E;
-    }
-
-    &[data-platform=bandcamp] {
-        background-color: #629aa9;
-    }
-    &[data-platform=apple-music] {
-        background-color: #fa2d48;
     }
 }
 
