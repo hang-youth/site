@@ -1,4 +1,5 @@
 import ActiveLink from '@components/ActiveLink'
+import Link from 'next/link'
 import styles from './Sidebar.module.scss'
 
 export default function Sidebar(props) {
@@ -6,7 +7,7 @@ export default function Sidebar(props) {
         <div className={styles.container}>
           <nav>
             <ul>
-              <ActiveLink activeClassName={styles.active} href="/shop">Webwinkel</ActiveLink>
+              <Link href="https://burningfik.com/" target={'_blank'}>Webwinkel</Link>
               <ActiveLink activeClassName={styles.active} href="/tour">Tour</ActiveLink>
               <ActiveLink activeClassName={styles.active} href="/muziek">Muziek</ActiveLink>
               <ActiveLink activeClassName={styles.active} href="/videos">Video's</ActiveLink>

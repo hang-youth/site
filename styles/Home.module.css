@@ -1,9 +1,0 @@
-.container {
-  max-height: 100vh;
-  display: flex;
-}
-
-.body {
-  height: 100vh;
-  overflow-y: scroll;
-}
