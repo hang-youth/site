@@ -5,7 +5,7 @@ export default function Release({release}) {
   return (
     <div key={release.slug} className={styles.container}>
       <div className={styles.cover}>
-          <Link href="/muziek"><div className={styles.button}><span>Terug naar alle muziek</span></div></Link>
+          <div className={styles.back}><Link href="/muziek">&#8249; Terug naar alle muziek</Link></div>
           <img src={release.coverImage} alt={release.title}/>
       </div>
       <div className={styles.content}>
