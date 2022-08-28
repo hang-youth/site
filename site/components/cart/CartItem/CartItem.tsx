@@ -104,12 +104,7 @@ const CartItem = ({
       </div>
       <div className={s.text}>
         <Link href={`/product/${item.path}`}>
-          <span
-            className={s.name}
-            onClick={() => closeSidebarIfPresent()}
-          >
-            {item.name}
-          </span>
+          <span className={s.name}>{item.name}</span>
         </Link>
         {options && options.length > 0 ? (
           <div className={s.option}>

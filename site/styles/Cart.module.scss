@@ -9,6 +9,8 @@
   display: flex;
   flex-direction: column;
   padding-left: 0px;
+  width: 768px;
+  max-width: 100%;
 }
 
 .totals {
@@ -33,26 +35,16 @@
   }
 }
 
-.button {
-  flex-basis: 80px;
-  cursor: pointer;
-
-  // text-align: center;
-  font-size: 24px;
+.checkout {
+  text-decoration: underline;
   text-transform: uppercase;
-  font-weight: bold;
-  // font-family: 'Hangende Jeugd VET';
+  color: #EA3524;
+  float: right;
 
-  border: 3px solid #ffffff;
-
-  margin-bottom: 8px;
-  padding: 12px 16px;
-
-  background-color: #d13535;
-  color: #ffffff;
-
+  cursor: pointer;
+  font-size: 24px;
   &:hover {
-      opacity: .8;
+    color: #000000;
   }
 }
 

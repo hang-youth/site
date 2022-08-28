@@ -21,7 +21,7 @@ a {
   box-sizing: border-box;
 }
 
-.links a, a.link {
+.links a, a.link, a > .link {
   display: block;
   color: #EA3524;
   text-decoration: underline;
