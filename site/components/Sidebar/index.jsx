@@ -6,7 +6,7 @@ export default function Sidebar(props) {
         <div className={styles.container}>
           <nav>
             <ul>
-              <a href="https://burningfik.com/" target="_blank">Webwinkel</a>
+              <ActiveLink activeClassName={styles.active} href="/webwinkel">Webwinkel</ActiveLink>
               <ActiveLink activeClassName={styles.active} href="/tour">Tour</ActiveLink>
               <ActiveLink activeClassName={styles.active} href="/muziek">Muziek</ActiveLink>
               <ActiveLink activeClassName={styles.active} href="/videos">Video's</ActiveLink>

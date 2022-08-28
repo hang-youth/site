@@ -1,5 +1,5 @@
 .container {
-  flex-basis: 410px;
+  flex-basis: 312px;
 
   display: flex;
   flex-direction: column;
@@ -20,12 +20,6 @@
         list-style-type: none;
         &.active {
           text-decoration: underline;
-        }
-
-        a {
-          &:hover {
-            text-decoration: underline;
-          }
         }
       }
     }
