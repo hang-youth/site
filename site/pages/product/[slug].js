@@ -1,10 +1,5 @@
-// import { CartSidebarView } from 'site/components/cart'
-import Product from '../../components/Product'
-// import { useUI } from '../../components/ui/context'
-
 import commerce from '@lib/api/commerce'
 
-import Head from 'next/head'
 import styles from '../../styles/Product.module.scss'
 import BasePage from '@components/BasePage'
 import Link from 'next/link'
@@ -37,7 +32,8 @@ export default function Slug({product, products}) {
         variantId: String(variant ? variant.id : product.variants[0].id),
       })
 
-      // TODO: show cart
+      // Redirect to cart
+      window.open("/cart")
 
     } catch (err) {
       console.log(err)

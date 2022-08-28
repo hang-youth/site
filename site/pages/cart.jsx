@@ -43,7 +43,7 @@ export default function Cart() {
     <BasePage title="Winkelwagen">
       <div className={styles.wrapper}>
 
-        {isLoading || isEmpty ? (
+        {isLoading ? (
           <></>
         ) : error ? (
           <></>
@@ -53,19 +53,25 @@ export default function Cart() {
         ) : (
           <>
             <h1>Winkelwagen</h1>
-            <h2>Controleer je bestelling</h2>
-            <ul className={styles.itemList}>
-              {data.lineItems.map((item) => (
-                <CartItem
-                  key={item.id}
-                  item={item}
-                  currencyCode={data.currency.code}
-                />
-              ))}
-            </ul>
+            {isEmpty ? (
+              <h2>Je winkelwagen is leeg.</h2>
+            ) : (
+              <>
+              <h2>Controleer je bestelling</h2>
+              <ul className={styles.itemList}>
+                {data.lineItems.map((item) => (
+                  <CartItem
+                    key={item.id}
+                    item={item}
+                    currencyCode={data.currency.code}
+                  />
+                ))}
+              </ul>
+            </>
+            )}
             </>
         )}
-
+        {!isEmpty && (
         <div className={styles.totals}>
           <dl>
             <dt>Subtotaal</dt>
@@ -79,6 +85,7 @@ export default function Cart() {
             <Link href="/checkout"><span className={styles.checkout}>Afrekenen</span></Link>
           </div>
         </div>
+        )}
       </div>
     </BasePage>
   )

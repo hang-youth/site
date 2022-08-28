@@ -1,4 +1,5 @@
 import ActiveLink from '@components/ActiveLink'
+import Link from 'next/link'
 import styles from './Sidebar.module.scss'
 
 export default function Sidebar(props) {
@@ -13,11 +14,16 @@ export default function Sidebar(props) {
               <ActiveLink activeClassName={styles.active} href="/financieel-verslag">Financieel Verslag</ActiveLink>
               <ActiveLink activeClassName={styles.active} href="/contact">Contact</ActiveLink>
               <ActiveLink activeClassName={styles.active} href="/links">Links</ActiveLink>
+              <a href="/cart"><img src="/images/cart.png" alt="Winkelwagen"/></a>
             </ul>
           </nav>
-            <div className={styles.content}>
-              {props.children}
-            </div>
+          <div className={styles.content}>
+            {props.children}
+          </div>
+          <div className={styles.footer}>
+            <p>&copy; PUNKBAND / HANG YOUTH {new Date().getFullYear()}</p>
+            <a href="/">Gemaakt door de Discord &lt;3</a>
+          </div>
         </div>
     )
 }

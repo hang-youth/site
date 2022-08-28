@@ -24,4 +24,22 @@
       }
     }
   }
+
+  .content {
+    flex: 1;
+  }
+
+  .footer {
+    margin-bottom: 32px;
+    font-size: 14px;
+    a {
+      text-decoration: underline;
+      text-transform: uppercase;
+      color: #4D4E4F;
+      font-weight: bold;
+      padding: 0px;
+      margin-bottom: 32px;
+      cursor: pointer;
+    }
+  }
 }
