@@ -13,7 +13,7 @@ module.exports = {
         stage: 3,
         features: {
           'custom-properties': false,
-          'prefers-color-scheme': false
+          'prefers-color-scheme-query': false
         },
       },
     ],
