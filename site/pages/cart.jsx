@@ -6,6 +6,8 @@ import usePrice from '@framework/product/use-price'
 import commerce from '@lib/api/commerce'
 import { CartItem } from '@components/cart'
 import styles from '../styles/Cart.module.scss'
+import Link from 'next/link'
+import BasePage from '../components/BasePage'
 
 export async function getStaticProps({
   preview,
@@ -14,9 +16,8 @@ export async function getStaticProps({
 }) {
   const config = { locale, locales }
   const { pages } = await commerce.getAllPages({ config, preview })
-  const { categories } = await commerce.getSiteInfo({ config, preview })
   return {
-    props: { pages, categories },
+    props: { pages },
   }
 }
 
@@ -39,13 +40,7 @@ export default function Cart() {
   )
 
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Hang Youth</title>
-        <meta name="description" content="Een uit de hand gelopen fanpage" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
+    <BasePage title="Winkelwagen">
       <div className={styles.wrapper}>
 
         {isLoading || isEmpty ? (
@@ -57,8 +52,8 @@ export default function Cart() {
 
         ) : (
           <>
-            <h1>My Cart</h1>
-            <h2>Review your Order</h2>
+            <h1>Winkelwagen</h1>
+            <h2>Controleer je bestelling</h2>
             <ul className={styles.itemList}>
               {data.lineItems.map((item) => (
                 <CartItem
@@ -76,23 +71,15 @@ export default function Cart() {
             <dt>Subtotaal</dt>
             <dd>{subTotal}</dd>
 
-            <dt>BTW</dt>
-            <dd>Wordt berekend bij afrekenen</dd>
-
             <dt>Verzendkosten</dt>
-            <dd>€5,95</dd>
-
-            <dt>Totaal</dt>
-            <dd>{total}</dd>
+            <dd>Wordt berekend bij afrekenen</dd>
           </dl>
 
           <div>
-            <a href="/checkout" width="100%" className={styles.button}>Naar betaalpagina</a>
+            <Link href="/checkout"><span className={styles.checkout}>Afrekenen</span></Link>
           </div>
         </div>
       </div>
-    </div>
+    </BasePage>
   )
 }
-
-// Cart.Layout = Layout
