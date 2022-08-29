@@ -40,7 +40,7 @@ export default function Cart() {
   )
 
   return (
-    <BasePage title="Winkelwagen">
+    <BasePage title="Winkelwagen" description='Spreekt voor zich.'>
       <div className={styles.wrapper}>
 
         {isLoading ? (

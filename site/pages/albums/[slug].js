@@ -6,7 +6,7 @@ import Release from '../../components/Release';
 
 export default function Album({album}) {
   return (
-    <BasePage title={`${album.title} - Hang Youth`}>
+    <BasePage title={`${album.title} - Hang Youth`} description="Een Hang Youth Single." meta={meta(album)}>
       <Release release={album}/>
     </BasePage>
   );
@@ -35,4 +35,17 @@ export async function getStaticProps({
           album
       },
   }
+}
+
+export function meta(album) {
+  return (
+    <>
+      <meta property="og:title" content={album.title} />
+      <meta property="og:description" content={album.content.replace(/<[^>]+>/g, '')} />
+      <meta property="og:url" content={process.env.NEXT_PUBLIC_BASE_URL + `/albums/${album.slug}`} />
+      <meta property="og:image" content={process.env.NEXT_PUBLIC_BASE_URL + album.coverImage} />
+      <meta property="og:type" content="music.album" />
+      <meta property="og:site_name" content="HANG YOUTH" />
+    </>
+  )
 }

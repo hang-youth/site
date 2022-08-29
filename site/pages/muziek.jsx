@@ -6,7 +6,7 @@ import Releases from '../components/Releases'
 
 export default function Music({albums, singles}) {
   return (
-    <BasePage title="Muziek - Hang Youth">
+    <BasePage title="Muziek - Hang Youth" description='Muziek. Albums, singles, Spotify, Bandcamp, Apple Music, de hele reutemeteut.'>
       <Releases albums={albums} singles={singles}/>
     </BasePage>
   );

@@ -12,7 +12,7 @@ export default function Webshop({products}) {
   const [showStatement, setShowStatement] = useState(false)
 
   return (
-    <BasePage title="Webwinkel - Hang Youth">
+    <BasePage title="Webwinkel - Hang Youth" description="Webwinkel voor merchandise. Kleding enzo. Koop of blijf lelijk.">
       <h1>Webwinkel</h1>
       <div className={styles.statement}>
         { showStatement ? (

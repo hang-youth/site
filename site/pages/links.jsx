@@ -2,7 +2,7 @@ import BasePage from '../components/BasePage';
 
 export default function Links() {
   return (
-    <BasePage title="Links - Hang Youth">
+    <BasePage title="Links - Hang Youth" descrtiption="Links en dingen waar we in principe niks mee te maken hebben maar die we wel vet vinden.">
       <h1>Links</h1>
       <div className="links">
         <a href="https://www.instagram.com/hang.youth/" target="_blank" rel="noreferrer">Hang Youth Instagram</a>
