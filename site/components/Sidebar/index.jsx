@@ -4,7 +4,7 @@ import styles from './Sidebar.module.scss'
 
 export default function Sidebar(props) {
     return (
-        <div className={styles.container}>
+        <div className={styles.container + (props.showMobileMenu ? " "+styles.active: '')}>
           <nav>
             <ul>
               <ActiveLink activeClassName={styles.active} href="/webwinkel">Webwinkel</ActiveLink>
@@ -17,12 +17,12 @@ export default function Sidebar(props) {
               <a href="/cart"><img src="/images/cart.png" alt="Winkelwagen"/></a>
             </ul>
           </nav>
-          <div className={styles.content}>
+          <div className={styles.content} onClick={props.onClick}>
             {props.children}
           </div>
           <div className={styles.footer}>
             <p>&copy; PUNKBAND / HANG YOUTH {new Date().getFullYear()}</p>
-            <a href="/">Gemaakt door de Discord &lt;3</a>
+            <a href="https://discord.gg/v6aBfJxvb7">Gemaakt door de Discord &lt;3</a>
           </div>
         </div>
     )

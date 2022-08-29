@@ -1,9 +1,12 @@
 import Sidebar from '@components/Sidebar'
+import ToggleSidebar from '@components/ToggleSidebar'
 
 import Head from 'next/head'
+import { useState } from 'react'
 import styles from '../../styles/Base.module.css'
 
 export default function BasePage({children, title = 'Hang Youth', description = 'Koop tickets voor de Hang Youth Tour'}) {
+  const [showMobileMenu, setShowMobileMenu] = useState(false)
 
   return (
     <div className={styles.container}>
@@ -22,12 +25,13 @@ export default function BasePage({children, title = 'Hang Youth', description = 
         <meta name="msapplication-config" content="/icons/browserconfig.xml"/>
         <meta name="theme-color" content="#ffffff"/>
       </Head>
-      <Sidebar/>
+      <Sidebar onClick={() => setShowMobileMenu(!showMobileMenu)} showMobileMenu={showMobileMenu}/>
       <div className={styles.body}>
         {
           children
         }
       </div>
+      <ToggleSidebar onClick={() => setShowMobileMenu(!showMobileMenu)} showMobileMenu={showMobileMenu}/>
     </div>
   )
 }
