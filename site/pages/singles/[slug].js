@@ -6,7 +6,7 @@ import Release from '@components/Release';
 
 export default function Single({single}) {
   return (
-    <BasePage title={`${single.title} - Hang Youth`}>
+    <BasePage title={`${single.title} - Hang Youth`} description="Een Hang Youth Single." meta={meta(single)}>
       <Release release={single}/>
     </BasePage>
   );
@@ -35,4 +35,17 @@ export async function getStaticProps({
           single
       },
   }
+}
+
+export function meta(single) {
+  return (
+    <>
+      <meta property="og:title" content={single.title} />
+      <meta property="og:description" content={single.content.replace(/<[^>]+>/g, '')} />
+      <meta property="og:url" content={process.env.NEXT_PUBLIC_BASE_URL + `/singles/${single.slug}`} />
+      <meta property="og:image" content={process.env.NEXT_PUBLIC_BASE_URL + single.coverImage} />
+      <meta property="og:type" content="music.song" />
+      <meta property="og:site_name" content="HANG YOUTH" />
+    </>
+  )
 }

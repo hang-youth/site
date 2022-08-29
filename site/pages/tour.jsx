@@ -12,7 +12,7 @@ const parseDate = (date) => {
 
 export default function Tour({tour}) {
   return (
-    <BasePage title="Tour - Hang Youth">
+    <BasePage title="Tour - Hang Youth" description="Koop kaarten voor de tour. Wees snel want de vorige tour was razendsnel uitverkocht.">
       <h1>Tour</h1>
       <table className={styles.table}>
         <tbody>

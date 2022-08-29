@@ -4,7 +4,7 @@ import styles from '../styles/Videos.module.scss'
 
 export default function Videos({data}) {
   return (
-    <BasePage title="Videos - Hang Youth">
+    <BasePage title="Videos - Hang Youth" description='Kunstzinnige video collectie. Potentiëel goude kalf materiaal.'>
       <h1>Videos</h1>
       <ul className={styles.grid}>
         {data.items.map(({ id, snippet = {} }) => {

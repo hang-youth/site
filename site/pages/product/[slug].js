@@ -41,7 +41,7 @@ export default function Slug({product, products}) {
   }
 
   return (
-    <BasePage title={`${product.name} - Hang Youth`} description={product.description || product.name}>
+    <BasePage title={`${product.name} - Hang Youth`} description={product.description || product.name} meta={meta(product)}>
       <h1>{product.name}</h1>
       <div className={styles.back}><Link href="/webwinkel">&#8249; Terug naar webwinkel</Link></div>
       <div className={styles.container}>
@@ -146,4 +146,21 @@ export function getVariant(product, opts) {
     )
   })
   return variant
+}
+
+export function meta(product) {
+  return (
+    <>
+      <meta property="og:title" content={product.name.toUpperCase()} />
+      <meta property="og:description" content={(product.description || 'Een Hang Youth product.').toUpperCase()} />
+      <meta property="og:image" content={product.images[0]?.url || placeholderImg} />
+      <meta property="og:url" content={process.env.NEXT_PUBLIC_BASE_URL + `/product/${product.slug}`} />
+      <meta property="og:type" content="product" />
+      <meta property="og:site_name" content="HANG YOUTH" />
+      <meta property="og:price:amount" content={product.price.value} />
+      <meta property="og:price:currency" content="EUR" />
+      <meta property="og:condition" content="new" />
+      <meta property="og:brand" content="HANG YOUTH" />
+    </>
+  )
 }
