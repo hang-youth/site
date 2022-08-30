@@ -16,8 +16,29 @@
   font-weight: bold;
 }
 
+@font-face {
+  font-family: 'TradeGothic20';
+  src: url('/fonts/TradeGothic20.otf');
+  src: url('/fonts/TradeGothic20.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/TradeGothic20.woff') format('woff'),
+       url('/fonts/TradeGothic20.ttf') format('truetype'),
+       url('/fonts/TradeGothic20.svg#TradeGothic20') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TradeGothic2';
+  src: url('/fonts/TradeGothic2.otf');
+  src: url('/fonts/TradeGothic2.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/TradeGothic2.woff') format('woff'),
+       url('/fonts/TradeGothic2.ttf') format('truetype'),
+       url('/fonts/TradeGothic2.svg#TradeGothic2') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Trade Gothic LT', Arial, Helvetica, sans-serif;
   font-weight: bold;
   text-transform: uppercase;
 }

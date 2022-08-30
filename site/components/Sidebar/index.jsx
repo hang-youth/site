@@ -9,8 +9,8 @@ export default function Sidebar(props) {
               <ActiveLink activeClassName={styles.active} href="/webwinkel">Webwinkel</ActiveLink>
               <ActiveLink activeClassName={styles.active} href="/tour">Tour</ActiveLink>
               <ActiveLink activeClassName={styles.active} href="/muziek">Muziek</ActiveLink>
-              <ActiveLink activeClassName={styles.active} href="/videos">Video's</ActiveLink>
-              <ActiveLink activeClassName={styles.active} href="/financieel-verslag">Financieel Verslag</ActiveLink>
+              <ActiveLink activeClassName={styles.active} href="/video">Video</ActiveLink>
+              {/* <ActiveLink activeClassName={styles.active} href="/financieel-verslag">Financieel Verslag</ActiveLink> */}
               <ActiveLink activeClassName={styles.active} href="/contact">Contact</ActiveLink>
               <ActiveLink activeClassName={styles.active} href="/links">Links</ActiveLink>
               <a className={styles.cart} href="/cart"><img src="/images/cart.png" alt="Winkelwagen"/></a>

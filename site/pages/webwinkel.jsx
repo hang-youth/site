@@ -24,8 +24,10 @@ export default function Webshop({products}) {
             allemaal ook iets voor de inkoopprijs; die ligt wat hoger dan bij een goedkoop Fruit of the Loom-shirt dat je na twee
             keer wassen kunt weggooien. Daarnaast bieden we bijna al onze muziek gratis aan op Spotify, en daar houden we niet
             per se veel aan over. Door het kopen van merch kun je ons direct supporten &lt;3 En dan kunnen wij doen alsof we van
-            deze punk bullshit kunnen leven. Tot slot kun je bij ieder item in de winkel zien wat de productiekosten zijn en hoeveel
-            wij er per person (eventueel) aan overhouden. Als je wilt weten hoeveel wij in total verdienen aan de band, kun je <a href="/financieel-verslag" className="link link--inline">hier ook ons financieel verslag downloaden.</a></p>
+            deze punk bullshit kunnen leven.
+            {/* Tot slot kun je bij ieder item in de winkel zien wat de productiekosten zijn en hoeveel
+            wij er per person (eventueel) aan overhouden. Als je wilt weten hoeveel wij in total verdienen aan de band, kun je <a href="/financieel-verslag" className="link link--inline">hier ook ons financieel verslag downloaden.</a> */}
+            </p>
             <h3>2. Verzending</h3>
             <p>We doen dit allemaal zelf en vanuit huis. We proberen ervoor te zorgen dat je bestelling binnen een week thuis is. Kan
             soms wat seller zijn, kan soms wat langer zijn. Mocht er iets aan de hand zijn (verkeerde maat, pakketje is er nog

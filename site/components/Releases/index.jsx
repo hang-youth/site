@@ -30,7 +30,7 @@ export default function Releases({albums, singles}) {
                 }
             </div>
             <div className={styles.content}>
-                <h2>Singles</h2>
+                <h2>Singles, EP's en compilaties</h2>
                 {
                     <div className={styles.release_wrapper}>
                         {

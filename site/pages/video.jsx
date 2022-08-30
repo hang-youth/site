@@ -1,11 +1,11 @@
 import BasePage from '../components/BasePage';
 
-import styles from '../styles/Videos.module.scss'
+import styles from '../styles/Video.module.scss'
 
-export default function Videos({data}) {
+export default function Video({data}) {
   return (
-    <BasePage title="Videos - Hang Youth" description='Kunstzinnige video collectie. Potentiëel goude kalf materiaal.'>
-      <h1>Videos</h1>
+    <BasePage title="Video - Hang Youth" description='Kunstzinnige video collectie. Potentiëel goude kalf materiaal.'>
+      <h1>Video</h1>
       <ul className={styles.grid}>
         {data.items.map(({ id, snippet = {} }) => {
           const { title, thumbnails = {}, resourceId = {} } = snippet;
