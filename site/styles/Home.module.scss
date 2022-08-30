@@ -1,4 +1,19 @@
+.container {
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
 .image {
-  width: 100%;
-  height: auto;
+  flex: 1 1 0%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    max-height: 100%;
+    max-width: 100%;
+
+    // max-height: 100%;
+  }
 }

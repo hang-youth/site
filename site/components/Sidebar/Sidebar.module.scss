@@ -4,24 +4,37 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
-  overflow: scroll;
   background-color: #E3E4E5;
 
   nav {
     display: flex;
     flex-direction: column;
     text-transform: uppercase;
-    font-size: 28px;
+    font-size: 36px;
 
     ul {
       padding: 0px;
       margin: 0px;
       li {
         list-style-type: none;
+        font-family: 'TradeGothic20', 'TradeGothic2', Arial, Helvetica, sans-serif;
+        padding-bottom: 8px;
         &.active {
           text-decoration: underline;
         }
       }
+    }
+  }
+
+  .cart {
+    img {
+      width: 60px;
+    }
+  }
+
+  .logo {
+    img {
+      width: 100%;
     }
   }
 

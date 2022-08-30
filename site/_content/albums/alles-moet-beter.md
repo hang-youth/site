@@ -2,24 +2,24 @@
 slug: alles-moet-beter
 coverImage: /images/album-alles-moet-beter.jpeg
 title: ALLES MOET BETER
-date: 17-nov-2020
+date: 17-11-2020
 linkBandcamp: https://hangyouth.bandcamp.com/album/alles-moet-beter
-linkSpotify: https://open.spotify.com/album/3buqH0z1d7JQzzQ6uFaBeo?si=LMGifUjRQue5oQ0gKKaPeg
+linkSpotify: https://open.spotify.com/album/3buqH0z1d7JQzzQ6uFaBeo
 linkAppleMusic: https://music.apple.com/us/album/alles-moet-beter/1539901390
 ---
 
-Geschreven door Hang Youth
+Geschreven en uitgevoerd door Hang Youth, met uitzondering van:
 
-DE OVERHEID NAAIT SEKSWERKERS geschreven door Firoza Mulahella en Hang Youth
+DE OVERHEID NAAIT SEKSWERKERS (ZONDER CONSENT), geschreven door Firoza en Hang Youth
 
-MANNEN geschreven door Anouk Beckers en Hang Youth
+MANNEN, geschreven en uitgevoerd door Anouk Beckers en Hang Youth
 
-Opgenomen in IJland Studio, Amsterdam
-
-Geproduceerd door Remko Schouten en Hang Youth
-
-Opgenomen door Remko Schouten, Kasper Spijkerman
+Geproduceerd, opgenomen en geëngineerd door Remko Schouten en Tim Visser in IJland Studio
 
 Gemixt en gemasterd door Remko Schouten
 
-Uitgebracht op 17 november 2020 door Burning Fik
+Coverfoto door Dennis Duijnhouwer
+
+Cover-art door Abel van Gijlswijk
+
+Uitgebracht door Burning Fik op 17 november 2020

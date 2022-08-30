@@ -2,13 +2,15 @@
 slug: doe-het-zelf
 coverImage: /images/album-doe-het-zelf.jpeg
 title: DOE HET ZELF
-date: 9-jun-2015
+date: 9-06-2015
 ---
 
-Geschreven en geproduceerd door Hang Youth
+Geschreven en uitgevoerd door Hang Youth
 
-Opgenomen in 3FM studio, Hilversum
+Geproduceerd, opgenomen en geëngineerd door in 3FM Studio te Hilversum
 
 Gemixt en gemasterd door Hang Youth
 
-Uitgebracht op 9 juni 2015 in eigen beheer
+Cover-art door Abel van Gijlswijk
+
+Uitgebracht in eigen beheer op 9 juni 2015

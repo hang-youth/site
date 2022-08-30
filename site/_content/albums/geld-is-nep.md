@@ -2,13 +2,15 @@
 slug: geld-is-nep
 coverImage: /images/album-geld-is-nep.jpeg
 title: GELD IS NEP
-date: 14-may-2015
+date: 14-05-2015
 ---
 
-Geschreven en geproduceerd door Hang Youth
+Geschreven en uitgevoerd door Hang Youth
 
-Opgenomen in Rocksupplies, Amsterdam
+Geproduceerd, opgenomen en geëngineerd door Hang Youth in Rock Supplies te Amsterdam
 
 Gemixt en gemasterd door Hang Youth
 
-Uitgebracht op 14 mei 2015 in eigen beheer
+Cover-art door Abel van Gijlswijk
+
+Uitgebracht in eigen beheer op 14 mei 2015
