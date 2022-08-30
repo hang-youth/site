@@ -14,12 +14,12 @@ export default function Music({albums, singles}) {
 
 export async function getStaticProps() {
 
-  const albums = getAllContent('albums', ['slug', 'coverImage', 'title', 'content', 'linkBandcamp', 'linkSpotify', 'linkAppleMusic']).map(async (album) => {
+  const albums = getAllContent('albums', ['slug', 'coverImage', 'title', 'date', 'content', 'linkBandcamp', 'linkSpotify', 'linkAppleMusic']).map(async (album) => {
     album.content = await markdownToHtml(album.content || '')
     return album
   })
 
-  const singles = getAllContent('singles', ['slug', 'coverImage', 'title', 'content', 'linkBandcamp', 'linkSpotify', 'linkAppleMusic']).map(async (single) => {
+  const singles = getAllContent('singles', ['slug', 'coverImage', 'title', 'date', 'content', 'linkBandcamp', 'linkSpotify', 'linkAppleMusic']).map(async (single) => {
     single.content = await markdownToHtml(single.content || '')
     return single
   })
