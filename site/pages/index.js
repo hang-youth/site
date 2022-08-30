@@ -5,8 +5,12 @@ import styles from '../styles/Home.module.scss';
 export default function Home() {
   return (
     <BasePage title="Hang Youth" description='Punkband'>
-      <h1>Hang Youth</h1>
-      <img className={styles.image} src="/images/home.png" alt="Hang Youth"/>
+      <div className={styles.container}>
+        <h1>Hang Youth</h1>
+        <div className={styles.image}>
+          <img src="/images/home.png" alt="Hang Youth"/>
+        </div>
+      </div>
     </BasePage>
   )
 }
