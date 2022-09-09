@@ -46,7 +46,18 @@ export default function Slug({product, products}) {
       <div className={styles.back}><Link href="/webwinkel">&#8249; Terug naar webwinkel</Link></div>
       <div className={styles.container}>
         <div className={styles.image}>
-          <img src={product.images[0]?.url || placeholderImg} alt={product.name} />
+          {
+            product.images.length > 0 ?
+            <div className={styles.images}>
+              {
+                product.images.map((image, i) => (
+                  <img key={i} src={image.url} alt={product.name} />
+                ))
+              }
+            </div>
+            :
+            <img src={placeholderImg} alt={product.name} />
+          }
         </div>
         <div className={styles.info}>
           <h1>{product.name}</h1>
