@@ -57,7 +57,7 @@
       width: 100%;
       height: 100%;
       background-color: rgba(0, 0, 0, 0.5);
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
       flex-direction: column;
       color: #fff;
@@ -65,6 +65,15 @@
       font-weight: bold;
       text-transform: uppercase;
       transition: all 0.3s ease-in-out;
+
+      h2 {
+        margin: 0px;
+        font-size: 60px;
+      }
+      p {
+        margin: 0px;
+        font-size: 60px;
+      }
     }
 
     &:hover .overlay {

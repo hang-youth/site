@@ -9,12 +9,12 @@ import styles from '../styles/Webshop.module.scss';
 const placeholderImg = '/images/product-img-placeholder.svg'
 
 export default function Webshop({products}) {
-  const [showStatement, setShowStatement] = useState(false)
+  // const [showStatement, setShowStatement] = useState(false)
 
   return (
     <BasePage title="Webwinkel - Hang Youth" description="Webwinkel voor merchandise. Kleding enzo. Koop of blijf lelijk.">
       <h1>Webwinkel</h1>
-      <div className={styles.statement}>
+      {/* <div className={styles.statement}>
         { showStatement ? (
           <>
             <button onClick={() => setShowStatement(false)}>KLIK HIER OM HET STATEMENT WEER IN TE KLAPPEN</button>
@@ -25,8 +25,8 @@ export default function Webshop({products}) {
             keer wassen kunt weggooien. Daarnaast bieden we bijna al onze muziek gratis aan op Spotify, en daar houden we niet
             per se veel aan over. Door het kopen van merch kun je ons direct supporten &lt;3 En dan kunnen wij doen alsof we van
             deze punk bullshit kunnen leven.
-            {/* Tot slot kun je bij ieder item in de winkel zien wat de productiekosten zijn en hoeveel
-            wij er per person (eventueel) aan overhouden. Als je wilt weten hoeveel wij in total verdienen aan de band, kun je <a href="/financieel-verslag" className="link link--inline">hier ook ons financieel verslag downloaden.</a> */}
+            Tot slot kun je bij ieder item in de winkel zien wat de productiekosten zijn en hoeveel
+            wij er per person (eventueel) aan overhouden. Als je wilt weten hoeveel wij in total verdienen aan de band, kun je <a href="/financieel-verslag" className="link link--inline">hier ook ons financieel verslag downloaden.</a>
             </p>
             <h3>2. Verzending</h3>
             <p>We doen dit allemaal zelf en vanuit huis. We proberen ervoor te zorgen dat je bestelling binnen een week thuis is. Kan
@@ -37,7 +37,7 @@ export default function Webshop({products}) {
           <button onClick={() => setShowStatement(true)}>KLIK HIER VOOR EEN STATEMENT OVER DE PRIJZEN (EN VERZENDING) VAN ONZE MERCH</button>
         )}
 
-      </div>
+      </div> */}
       <div className={styles.products}>
         {products.map(product => (
           <Link href="/product/[slug]" as={`/product/${product.slug}`} key={product.id}>
