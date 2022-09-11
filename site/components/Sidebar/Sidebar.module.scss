@@ -5,6 +5,14 @@
   flex-direction: column;
   height: 100vh;
   background-color: #E3E4E5;
+  overflow: scroll;
+
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   nav {
     display: flex;
@@ -69,6 +77,10 @@
     display: none;
     &.active {
       display: flex;
+    }
+    .logo img {
+      max-width: 100%;
+      width: 300px;
     }
   }
 }

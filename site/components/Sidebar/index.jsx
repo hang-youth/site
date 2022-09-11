@@ -13,8 +13,8 @@ export default function Sidebar(props) {
               {/* <ActiveLink activeClassName={styles.active} href="/financieel-verslag">Financieel Verslag</ActiveLink> */}
               <ActiveLink activeClassName={styles.active} href="/contact">Contact</ActiveLink>
               <ActiveLink activeClassName={styles.active} href="/links">Links</ActiveLink>
-              <a className={styles.cart} href="/cart"><img src="/images/cart.png" alt="Winkelwagen"/></a>
-              <a className={styles.logo} href="/"><img src="/images/HANG-YOUTH-LOGO.png" alt="HANG YOUTH LOGO"/></a>
+              <li><a className={styles.cart} href="/cart"><img src="/images/cart.png" alt="Winkelwagen"/></a></li>
+              <li><a className={styles.logo} href="/"><img src="/images/HANG-YOUTH-LOGO.png" alt="HANG YOUTH LOGO"/></a></li>
             </ul>
           </nav>
           <div className={styles.content} onClick={props.onClick}>
