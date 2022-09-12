@@ -43,7 +43,7 @@ export default function Slug({product, products}) {
   return (
     <BasePage title={`${product.name} - Hang Youth`} description={product.description || product.name} meta={meta(product)}>
       <h1>{product.name}</h1>
-      <div className={styles.back}><Link href="/webwinkel">&#8249; Terug naar webwinkel</Link></div>
+      <div className={styles.back}><Link href="/">&#8249; Terug naar webwinkel</Link></div>
       <div className={styles.container}>
         <div className={styles.image}>
           {
@@ -126,6 +126,13 @@ export async function getServerSideProps({params}) {
   const { product } = await commerce.getProduct({
     variables: { slug: params.slug },
   })
+
+  // Redirect to 404 if product is not found
+  if(!product) {
+    return {
+      notFound: true
+    }
+  }
 
   // Get 3 random products not including the current one
   const { products } = await commerce.getAllProducts({

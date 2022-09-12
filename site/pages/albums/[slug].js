@@ -28,6 +28,14 @@ export async function getStaticProps({
   params
 }) {
   const album = getContentBySlug('albums', params.slug, ['slug', 'coverImage', 'title', 'content', 'linkBandcamp', 'linkSpotify', 'linkAppleMusic'])
+
+  // Redirect to 404 if album is not found
+  if(!album) {
+    return {
+      notFound: true
+    }
+  }
+
   album.content = await markdownToHtml(album.content || '')
 
   return {

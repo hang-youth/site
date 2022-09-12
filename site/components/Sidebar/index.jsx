@@ -6,7 +6,7 @@ export default function Sidebar(props) {
         <div className={styles.container + (props.showMobileMenu ? " "+styles.active: '')}>
           <nav>
             <ul>
-              <ActiveLink activeClassName={styles.active} href="/webwinkel">Webwinkel</ActiveLink>
+              <ActiveLink activeClassName={styles.active} href="/">Webwinkel</ActiveLink>
               <ActiveLink activeClassName={styles.active} href="/tour">Tour</ActiveLink>
               <ActiveLink activeClassName={styles.active} href="/muziek">Muziek</ActiveLink>
               <ActiveLink activeClassName={styles.active} href="/video">Video</ActiveLink>

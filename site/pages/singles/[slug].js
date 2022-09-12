@@ -28,6 +28,14 @@ export async function getStaticProps({
   params
 }) {
   const single = getContentBySlug('singles', params.slug, ['slug', 'coverImage', 'title', 'content', 'linkBandcamp', 'linkSpotify', 'linkAppleMusic'])
+
+  // Redirect to 404 if single is not found
+  if(!single) {
+    return {
+      notFound: true
+    }
+  }
+
   single.content = await markdownToHtml(single.content || '')
 
   return {
