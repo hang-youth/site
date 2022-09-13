@@ -2,6 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 32px;
+
 }
 
 .back {
@@ -121,5 +122,16 @@
     &:hover .overlay {
       display: flex;
     }
+  }
+}
+
+@media(min-width: 769px) {
+  .container {
+    align-items: flex-start;
+  }
+  .info {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
   }
 }
