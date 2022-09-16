@@ -7,7 +7,7 @@ export default function Video({data}) {
     <BasePage title="Video - Hang Youth" description='Kunstzinnige video collectie. Potentiëel goude kalf materiaal.'>
       <h1>Video</h1>
       <ul className={styles.grid}>
-        {data.items.map(({ id, snippet = {} }) => {
+        {data.items && data.items.map(({ id, snippet = {} }) => {
           const { title, thumbnails = {}, resourceId = {} } = snippet;
           const { medium } = thumbnails;
           return (
@@ -33,7 +33,7 @@ export async function getServerSideProps() {
   const data = await res.json();
   return {
     props: {
-      data
+      data: data ?? {items: []}
     }
   }
 }
