@@ -23,9 +23,6 @@ export default function Tour({tour}) {
               <td><a href={item.ticketSaleUrl} target="_blank" className="link">Koop Kaarten</a></td>
             </tr>
           ))}
-          <tr><td>Etc.</td></tr>
-          <tr><td>Etc.</td></tr>
-          <tr><td>Etc.</td></tr>
         </tbody>
       </table>
     </BasePage>
