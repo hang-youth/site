@@ -5,12 +5,14 @@ import BasePage from '@components/BasePage'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { useAddItem } from '@framework/cart'
+import { useRouter } from 'next/router'
 
 import ReactTooltip from 'react-tooltip';
 
 export default function Slug({product, products}) {
   const [choices, setChoices] = useState({})
   const addItem = useAddItem()
+  const router = useRouter()
 
   const variant = getVariant(product, choices)
 
@@ -33,7 +35,7 @@ export default function Slug({product, products}) {
       })
 
       // Redirect to cart
-      window.open("/cart")
+      router.push('/cart')
 
     } catch (err) {
       console.log(err)
