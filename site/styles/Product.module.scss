@@ -23,7 +23,6 @@
 
 .info {
   word-break: break-all;
-  width: 100%;
   .price {
     text-transform: uppercase;
     font-size: 1.5rem;
@@ -134,5 +133,11 @@
     position: -webkit-sticky;
     position: sticky;
     top: 0px;
+  }
+}
+
+@media(max-width:768px) {
+  .info {
+    width: 100%;
   }
 }
