@@ -8,7 +8,10 @@ export default function Contact() {
       <p><b>Boekingen:</b> Jeps Salfischberger op <a className='link link--inline' href="mailto:j.salfischberger@mojo.nl">j.salfischberger@mojo.nl</a><br/>
       <b>Pers, management, etc:</b> Rick Bakker op <a className='link link--inline' href="mailto:rick@resort.net">rick@resort.net</a><br/>
       <b>Fanmail &amp; opbouwende kritiek:</b> <a className='link link--inline' href="mailto:info@hangyouth.nl">info@hangyouth.nl</a></p>
-      <b><Link href="/returns">Retourneren</Link></b>
+
+      <p><b><Link href="/verzend-beleid">Verzend- en Leveringsbeleid</Link></b> en <b><Link href="/algemene-voorwaarden">Algemene Voorwaarden</Link></b></p>
+
+      <p><small>KVK: 82731853</small></p>
     </BasePage>
   );
 }
