@@ -9,9 +9,22 @@ export default function Contact() {
       <b>Pers, management, etc:</b> Rick Bakker op <a className='link link--inline' href="mailto:rick@resort.net">rick@resort.net</a><br/>
       <b>Fanmail &amp; opbouwende kritiek:</b> <a className='link link--inline' href="mailto:info@hangyouth.nl">info@hangyouth.nl</a></p>
 
-      <p><b><Link href="/verzend-beleid">Verzend- en Leveringsbeleid</Link></b> en <b><Link href="/algemene-voorwaarden">Algemene Voorwaarden</Link></b></p>
+      <h3>Contactgegevens</h3>
+      <p>
+      PUNKBAND<br/>
+      Pieter Vlamingstraat 38<br/>
+      1093 AE Amsterdam
+      </p>
 
-      <p><small>KVK: 82731853</small></p>
+      <p>
+      <a href="mailto:info@hangyouth.nl">info@hangyouth.nl</a><br/>
+      <a href="https://instagram.com/hang.youth">instagram.com/hang.youth</a>
+      </p>
+      <p>
+      KVK: 82731853<br/>
+      Vestigingsnummer: 0000489448489
+      </p>
+      <p><b><Link href="/verzend-beleid">Verzend- en Leveringsbeleid</Link></b> en <b><Link href="/algemene-voorwaarden">Algemene Voorwaarden</Link></b></p>
     </BasePage>
   );
 }
