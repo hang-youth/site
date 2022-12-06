@@ -51,7 +51,6 @@
   }
 
   .footer {
-    margin-bottom: 32px;
     font-size: 14px;
     a {
       text-decoration: underline;
@@ -59,7 +58,6 @@
       color: #4D4E4F;
       font-weight: bold;
       padding: 0px;
-      margin-bottom: 32px;
       cursor: pointer;
     }
   }
@@ -68,11 +66,12 @@
 @media(max-width: 768px) {
   .container {
     position: fixed;
-    top: 0px;
+    top: 32px;
     left: 0px;
-    bottom: 32px;
+    bottom: 0px;
     width: 100vw;
     height: auto;
+    padding-top: 32px;
     z-index: 10;
     display: none;
     &.active {
