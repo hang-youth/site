@@ -10,7 +10,7 @@ const parseDate = (date) => {
   return `${day} ${months[month - 1]} ‘${year.substring(2)}`;
 }
 
-export default function Tour({tour}) {
+export default function Tour({tour, festivals}) {
   return (
     <BasePage title="Tour - Hang Youth" description="Koop kaarten voor de tour. Wees snel want de vorige tour was razendsnel uitverkocht.">
       <h1>Tour</h1>
@@ -20,11 +20,35 @@ export default function Tour({tour}) {
             <tr key={key}>
               <td>{parseDate(item.date)}</td>
               <td>{item.venue}, {item.city}</td>
-              <td><a href={item.ticketSaleUrl} target="_blank" className="link">Koop Kaarten</a></td>
+                  <td>{
+                    item.ticketSaleUrl &&
+                    <a href={item.ticketSaleUrl} target="_blank" className="link">Koop Kaarten</a>
+                  }</td>
             </tr>
           ))}
         </tbody>
       </table>
+
+      {
+        festivals.length > 0 &&
+        <>
+          <h2>Festivals</h2>
+          <table className={styles.table}>
+            <tbody>
+              {festivals.map((item, key) => (
+                <tr key={key}>
+                  <td>{parseDate(item.date)}</td>
+                  <td>{item.festival}, {item.city}</td>
+                  <td>{
+                    item.ticketSaleUrl &&
+                    <a href={item.ticketSaleUrl} target="_blank" className="link">Koop Kaarten</a>
+                  }</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </>
+      }
     </BasePage>
   );
 }
@@ -35,13 +59,19 @@ export async function getServerSideProps() {
     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
   });
 
-  const data = await client.getEntries({
+  const tourData = await client.getEntries({
     content_type: 'tourDate',
     order: 'fields.date',
     'fields.date[gte]': new Date(),
   })
 
-  const tour = data.items.map(({fields}) => {
+  const festivalData = await client.getEntries({
+    content_type: 'festivalDate',
+    order: 'fields.date',
+    'fields.date[gte]': new Date(),
+  })
+
+  const tour = tourData.items.map(({fields}) => {
     return {
       city: fields.city,
       date: fields.date,
@@ -50,9 +80,19 @@ export async function getServerSideProps() {
     }
   })
 
+  const festivals = festivalData.items.map(({fields}) => {
+    return {
+      city: fields.city,
+      date: fields.date,
+      festival: fields.festival,
+      ticketSaleUrl: fields.ticketSaleUrl,
+    }
+  })
+
   return {
     props: {
-      tour: tour
+      tour: tour,
+      festivals: festivals,
     }
   }
 }
