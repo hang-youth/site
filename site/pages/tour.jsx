@@ -14,20 +14,25 @@ export default function Tour({tour, festivals}) {
   return (
     <BasePage title="Tour - Hang Youth" description="Koop kaarten voor de tour. Wees snel want de vorige tour was razendsnel uitverkocht.">
       <h1>Tour</h1>
-      <table className={styles.table}>
-        <tbody>
-          {tour.map((item, key) => (
-            <tr key={key}>
-              <td>{parseDate(item.date)}</td>
-              <td>{item.venue}, {item.city}</td>
-                  <td>{
-                    item.ticketSaleUrl &&
-                    <a href={item.ticketSaleUrl} target="_blank" className="link">Koop Kaarten</a>
-                  }</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      {
+        (tour.length === 0) ?
+          <p>Er zijn momenteel geen tourdata bekend.</p>
+        :
+        <table className={styles.table}>
+          <tbody>
+            {tour.map((item, key) => (
+              <tr key={key}>
+                <td>{parseDate(item.date)}</td>
+                <td>{item.venue}, {item.city}</td>
+                    <td>{
+                      item.ticketSaleUrl &&
+                      <a href={item.ticketSaleUrl} target="_blank" className="link">Koop Kaarten</a>
+                    }</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      }
 
       {
         festivals.length > 0 &&
