@@ -9,6 +9,8 @@ import { useRouter } from 'next/router'
 
 import ReactTooltip from 'react-tooltip';
 
+const placeholderImg = '/images/product-img-placeholder.svg'
+
 export default function Slug({product, products}) {
   const [choices, setChoices] = useState({})
   const addItem = useAddItem()
