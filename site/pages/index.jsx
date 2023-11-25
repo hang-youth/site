@@ -6,10 +6,10 @@ import BasePage from '../components/BasePage';
 
 import styles from '../styles/Webshop.module.scss';
 
+const placeholderImg = '/images/product-img-placeholder.svg'
+
 export default function Webshop({products}) {
   // const [showStatement, setShowStatement] = useState(false)
-
-  const placeholderImg = '/images/product-img-placeholder.svg'
 
   return (
     <BasePage title="Webwinkel - Hang Youth" description="Webwinkel voor merchandise. Kleding enzo. Koop of blijf lelijk.">
@@ -38,7 +38,6 @@ export default function Webshop({products}) {
         )}
 
       </div> */}
-
       <div className={styles.products}>
         {products.map(product => (
           <Link href="/product/[slug]" as={`/product/${product.slug}`} key={product.id}>

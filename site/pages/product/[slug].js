@@ -87,7 +87,7 @@ export default function Slug({product, products}) {
                       <li key={i} onClick={(e) => {
                           setChoices(choice)
                         }}>
-                        <button className={styles.button + (active?' '+styles.active:'')}>{v.label}</button>
+                        <button className={styles.link + (active?' '+styles.active:'')}>{v.label}</button>
                       </li>
                     )
                   })}
