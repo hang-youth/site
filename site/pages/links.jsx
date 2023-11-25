@@ -8,7 +8,7 @@ export default function Links() {
         <a href="https://www.instagram.com/hang.youth/" target="_blank" rel="noreferrer">Hang Youth Instagram</a>
         <a href="https://open.spotify.com/artist/33s4eablBmnrPlE3y6CZFR" target="_blank" rel="noreferrer">Hang Youth Spotify</a>
         <a href="https://hangyouth.bandcamp.com/" target="_blank" rel="noreferrer">Hang Youth Bandcamp</a>
-        <a href="https://www.facebook.com/hangyouth/" target="_blank" rel="noreferrer">Hang Youth Discord</a>
+        <a href="https://discord.gg/v6aBfJxvb7" target="_blank" rel="noreferrer">Hang Youth Discord</a>
         <a href="https://burningfik.com" target="_blank" rel="noreferrer">Burning Fik website</a>
         <a href="https://www.youtube.com/c/BurningFik/" target="_blank" rel="noreferrer">Burning Fik YouTube</a>
       </div>
