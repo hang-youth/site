@@ -58,7 +58,7 @@ export default function Webshop({products}) {
 
 export async function getServerSideProps() {
   const { products } = await commerce.getAllProducts({
-    variables: { first: 12 },
+    variables: { first: 50 },
   })
 
   return {
