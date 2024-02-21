@@ -67,6 +67,8 @@
       transition: all 0.3s ease-in-out;
 
       h2 {
+        max-width: 100%;
+        word-wrap: break-word;
         margin: 0px;
         font-size: 60px;
       }
